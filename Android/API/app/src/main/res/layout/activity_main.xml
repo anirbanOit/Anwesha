@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.optlptp153.api.MainActivity">
+
+   <EditText
+       android:id="@+id/fname"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:hint="@string/firstName"
+       tools:layout_editor_absoluteY="16dp"
+       tools:layout_editor_absoluteX="42dp"
+       android:layout_alignParentTop="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="19dp"
+       android:textSize="20sp"
+       android:layout_marginLeft="15dp"
+       android:layout_marginRight="15dp"
+       android:drawableLeft="@drawable/icn_name"
+       android:drawablePadding="10dp"/>
+
+    <EditText
+        android:id="@+id/lname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                android:layout_marginTop="25dp"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                android:ems="10"
+        android:layout_marginRight="15dp"
+        android:hint="@string/lastName"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="80dp"
+        android:layout_below="@+id/fname"
+        android:layout_alignLeft="@+id/linearLayout"
+        android:layout_alignStart="@+id/linearLayout"
+        android:drawableLeft="@drawable/icn_name"
+        android:drawablePadding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/lname"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        >
+
+        <Button
+            android:id="@+id/btn_male"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_weight="0.5"
+            android:text="Male"
+            />
+
+        <Button
+            android:id="@+id/btn_female"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Female"
+            />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/dob"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:hint="@string/dob"
+        android:layout_marginLeft="15dp"
+        android:drawableLeft="@drawable/calender"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignRight="@+id/dtp"
+        android:layout_alignEnd="@+id/dtp"
+        android:layout_marginTop="25dp"
+        android:paddingRight="30dp"
+        android:drawablePadding="10dp"/>
+
+    <ImageButton
+        android:id="@+id/dtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dropdown"
+        android:layout_marginRight="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_alignBottom="@+id/dob"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="14dp"
+        />
+    <TextView
+        android:id="@+id/lbl_dpt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Department:"
+        android:textSize="25sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@id/dob"
+        android:textStyle="bold"
+        />
+
+
+    <EditText
+        android:id="@+id/dept"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:hint="Options"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/lbl_dpt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        />
+
+    <Spinner
+        android:id="@+id/dropdwn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:spinnerMode="dropdown"
+        android:layout_alignTop="@+id/dept"
+        android:layout_alignRight="@+id/dept"
+        android:layout_alignEnd="@+id/dept"
+        android:layout_marginTop="8dp">
+    </Spinner>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/img"
+        android:layout_below="@+id/dept"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/image" />
+
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/image"
+        android:layout_toRightOf="@+id/lbl_dpt"
+        android:layout_toEndOf="@+id/lbl_dpt"
+        android:background="@drawable/edit"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="PREVIEW"
+        android:layout_below="@+id/btn_add"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/edit"/>
+
+</RelativeLayout>
+</ScrollView>
